@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Jquery Helper Methods</h1>
+
+    <ul>
+        <li>Jquery Selectors</li>
+        <li>Jquery Methods</li>
+        <li>Jquery Animations</li>
+    </ul>
+<img src="koala.png" alt="cute koala drawing">
+    <input id="name" type="text" placeholder="Name">
+    <input id="middlename" type="text" placeholder="Middlename">
+    <input id="surname" type="text" class="green" placeholder="Surname">
+    <button id="save" onclick="saveInfo()">Save</button>
+    <script>
+        console.log($("ul").text()); //getter
+        $("h1").text("JavaScript"); //setter
+
+        console.log($("input").val()); //getter
+        $("input").val("Changed"); //setter
+
+        function saveInfo() {
+            var name = $("#name").val();
+            var surname = $("#surname").val();
+
+            console.log("Your name: " + name + "\nYour surname: " + surname);
+            $("#name").addClass("highlight")
+            $("#surname").removeClass("green")
+            $("#middlename").toggleClass("red")
+        
+        }
+
+        $("img").attr("width", 400)
+
+    </script>
+</body>
+
+</html>
