@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pcolor {
+            color: red;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">Web Developer Eğitimi 1</p>
+
+    <p id="p2">Java Dev Eğitimi 2</p>
+
+    <p class="paragraf">Laravel Eğitimi </p>
+
+    <p class="paragraf">NudeJS Eğitimi</p>
+
+
+    <script>
+        $(function () {
+            $(".paragraf").click(function () {
+                $(this).addClass("pcolor");
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>
