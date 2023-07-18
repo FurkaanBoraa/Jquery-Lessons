@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Change Events</h1>
+    <form action="">
+        <p>
+            Name: <input type="text" class="control">
+        </p>
+        <p>
+            Hobbies: <select name="" id="" class="control">
+                <option value="sport">Doing sports</option>
+                <option value="cinema">Going cinema</option>
+            </select>
+        </p>
+    </form>
+
+    <script>
+
+        $(function () {
+            $(".control").change(function(){
+                console.log($(this).val());
+            })
+
+
+
+        })
+
+    </script>
+</body>
+
+</html>
