@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Peek-a-Boo</h1>
+    <p>From zero to hero</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+    <script>
+
+        $(function () {
+            $("#hide").click(() => {
+                $("p").hide(1000, function(){
+                    $(this).html("How dare you hide me")
+                });
+            })
+            $("#show").click(() => {
+                $("p").show();
+            })
+            $("#toggle").click(() => {
+                $("p").toggle("slow");
+            })
+
+
+
+
+        })
+
+    </script>
+
+
+</body>
+
+</html>
