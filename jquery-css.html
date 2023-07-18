@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="header">Jquery ve CSS</h1>
+    <ul id="list">
+        <li class="item">Jquery reference</li>
+        <li>Selectors <a href="#">Link1</a></li>
+        <li class="item">Jquery plugins</li>
+    </ul>
+    <a href="#">Link2</a>
+    <script>
+        document.getElementById("header").style.color = "red";
+        $("#header").css("color", "purple");
+
+        $("#list a").css("text-decoration", "none"); // link under element with id "list"
+        $("a").css("text-decoration", "none"); // all links
+
+        var styles = {
+            color: "green",
+            fontSize: "20px",
+            border: "1px solid red"
+        }
+        $("ul li").css(styles);
+
+        $("a").css({
+            color: "gray",
+            fontSize: "22px",
+            border: "1px solid red"
+        });
+
+        $(".item").css({
+            display: "none"
+        });
+    </script>
+</body>
+
+</html>
